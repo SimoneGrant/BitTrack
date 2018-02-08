@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0423CEBADAD8C44317896E45 /* Pods_BitTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA7EA33348FC65195B72141 /* Pods_BitTrack.framework */; };
 		1822D270202CC83A0006A9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822D26F202CC83A0006A9D6 /* AppDelegate.swift */; };
 		1822D272202CC83A0006A9D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822D271202CC83A0006A9D6 /* ViewController.swift */; };
 		1822D275202CC83B0006A9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1822D273202CC83B0006A9D6 /* Main.storyboard */; };
 		1822D277202CC83B0006A9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1822D276202CC83B0006A9D6 /* Assets.xcassets */; };
 		1822D27A202CC83B0006A9D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1822D278202CC83B0006A9D6 /* LaunchScreen.storyboard */; };
+		1822D285202CE4910006A9D6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822D284202CE4910006A9D6 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		1822D276202CC83B0006A9D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1822D279202CC83B0006A9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1822D27B202CC83B0006A9D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1822D284202CE4910006A9D6 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		A5664260A49182B3FC702500 /* Pods-BitTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitTrack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitTrack/Pods-BitTrack.debug.xcconfig"; sourceTree = "<group>"; };
+		C89CC205BE68D33C0AD48148 /* Pods-BitTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitTrack.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitTrack/Pods-BitTrack.release.xcconfig"; sourceTree = "<group>"; };
+		CEA7EA33348FC65195B72141 /* Pods_BitTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0423CEBADAD8C44317896E45 /* Pods_BitTrack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				1822D26E202CC83A0006A9D6 /* BitTrack */,
 				1822D26D202CC83A0006A9D6 /* Products */,
+				E09EEBC5014C3788A759FA78 /* Pods */,
+				6A871D4878F48AC79910CEEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +63,64 @@
 		1822D26E202CC83A0006A9D6 /* BitTrack */ = {
 			isa = PBXGroup;
 			children = (
-				1822D26F202CC83A0006A9D6 /* AppDelegate.swift */,
-				1822D271202CC83A0006A9D6 /* ViewController.swift */,
-				1822D273202CC83B0006A9D6 /* Main.storyboard */,
-				1822D276202CC83B0006A9D6 /* Assets.xcassets */,
-				1822D278202CC83B0006A9D6 /* LaunchScreen.storyboard */,
+				1822D286202CE4980006A9D6 /* Model */,
+				1822D282202CC96F0006A9D6 /* Controller */,
+				1822D281202CC9660006A9D6 /* View */,
+				1822D283202CC9830006A9D6 /* Supporting Files */,
 				1822D27B202CC83B0006A9D6 /* Info.plist */,
 			);
 			path = BitTrack;
+			sourceTree = "<group>";
+		};
+		1822D281202CC9660006A9D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1822D273202CC83B0006A9D6 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1822D282202CC96F0006A9D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1822D271202CC83A0006A9D6 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1822D283202CC9830006A9D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1822D276202CC83B0006A9D6 /* Assets.xcassets */,
+				1822D26F202CC83A0006A9D6 /* AppDelegate.swift */,
+				1822D278202CC83B0006A9D6 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1822D286202CE4980006A9D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1822D284202CE4910006A9D6 /* Network.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A871D4878F48AC79910CEEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEA7EA33348FC65195B72141 /* Pods_BitTrack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E09EEBC5014C3788A759FA78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5664260A49182B3FC702500 /* Pods-BitTrack.debug.xcconfig */,
+				C89CC205BE68D33C0AD48148 /* Pods-BitTrack.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1822D27E202CC83B0006A9D6 /* Build configuration list for PBXNativeTarget "BitTrack" */;
 			buildPhases = (
+				0D2F6C585BF80C03DB878B73 /* [CP] Check Pods Manifest.lock */,
 				1822D268202CC83A0006A9D6 /* Sources */,
 				1822D269202CC83A0006A9D6 /* Frameworks */,
 				1822D26A202CC83A0006A9D6 /* Resources */,
+				066E28F2509569E8B0AC8DDC /* [CP] Embed Pods Frameworks */,
+				47B7E703686BE33A0261EF53 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +193,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		066E28F2509569E8B0AC8DDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BitTrack/Pods-BitTrack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitTrack/Pods-BitTrack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D2F6C585BF80C03DB878B73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitTrack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47B7E703686BE33A0261EF53 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitTrack/Pods-BitTrack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1822D268202CC83A0006A9D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +256,7 @@
 			files = (
 				1822D272202CC83A0006A9D6 /* ViewController.swift in Sources */,
 				1822D270202CC83A0006A9D6 /* AppDelegate.swift in Sources */,
+				1822D285202CE4910006A9D6 /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +391,7 @@
 		};
 		1822D27F202CC83B0006A9D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5664260A49182B3FC702500 /* Pods-BitTrack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +407,7 @@
 		};
 		1822D280202CC83B0006A9D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C89CC205BE68D33C0AD48148 /* Pods-BitTrack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
