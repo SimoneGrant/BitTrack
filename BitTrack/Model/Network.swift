@@ -7,7 +7,11 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 struct Network {
     static let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
 }
+
+

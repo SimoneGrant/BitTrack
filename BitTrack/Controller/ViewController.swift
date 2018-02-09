@@ -10,8 +10,10 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
+
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
+ 
+    var priceTimer: Timer!
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     let currencySymbolArr = ["$", "R$", "$", "¥", "€", "£", "$", "Rp", "₪", "₹", "¥", "$", "kr", "$", "zł", "lei", "₽", "kr", "$", "$", "R"]
     var finalURL = ""
@@ -25,15 +27,29 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(true)
+        priceTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(reload), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        priceTimer.invalidate()
     }
     
     func setup() {
         currencyPicker.delegate = self
         currencyPicker.dataSource = self
         currencyPicker.selectRow(19, inComponent: 0, animated: false)
-        getCurrencyUpdate(url: Network.baseURL + "USD")
+        finalURL = Network.baseURL + "USD"
+        getCurrencyUpdate(url: finalURL)
+    }
+    
+    @objc func reload() {
+        getCurrencyUpdate(url: finalURL)
     }
     
     //MARK: - UIPickerView Methods
@@ -63,9 +79,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 let json = JSON(response.result.value!)
                 self.updateLabels(with: json)
             } else {
-                self.currentPriceLabel.text = "Connection Issues"
-                self.dailyHighLabel.text = ""
-                self.dailyLowLabel.text = ""
+                self.currentPriceLabel.text = "No Connection"
+                self.dailyHighLabel.text = "0"
+                self.dailyLowLabel.text = "0"
             }
         }
     }
@@ -80,5 +96,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
+
 }
 
